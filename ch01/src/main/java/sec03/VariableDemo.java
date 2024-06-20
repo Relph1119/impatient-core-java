@@ -5,8 +5,8 @@ import java.util.Random;
 public class VariableDemo {
     public static final int DAYS_PER_YEAR = 365;
     
-    enum Weekday { MON, TUE, WED, THU, FRI, SAT, SUN };
-    
+    enum Weekday { MON, TUE, WED, THU, FRI, SAT, SUN }
+
     public static void main(String[] args) {
         int total = 0;
         int i = 0, count;

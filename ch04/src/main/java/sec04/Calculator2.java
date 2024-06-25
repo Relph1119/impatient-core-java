@@ -12,7 +12,7 @@ public class Calculator2 {
         };
         return result;
     }
-    
+
     public static void main(String[] args) {
         var in = new Scanner(System.in);
         System.out.print("First operand: ");
@@ -24,7 +24,7 @@ public class Calculator2 {
         for (Operation op : Operation.values()) {
             if (op.getSymbol().equals(opSymbol)) {
                 System.out.println(eval(op, a, b));
-            } 
+            }
         }
     }
 }

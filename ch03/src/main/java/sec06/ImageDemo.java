@@ -16,11 +16,11 @@ public class ImageDemo {
                 image.setRGB(x, y, color.getRGB());
             }
         return image;
-    } 
-    
+    }
+
     public static void main(String[] args) throws IOException {
         BufferedImage frenchFlag = ImageDemo.createImage(150, 100,
-            (x, y) -> x < 50 ? Color.BLUE : x < 100 ? Color.WHITE : Color.RED);
+                (x, y) -> x < 50 ? Color.BLUE : x < 100 ? Color.WHITE : Color.RED);
         Path path = Path.of("flag.png");
         ImageIO.write(frenchFlag, "PNG", path.toFile());
         System.out.println("Image saved to " + path.toAbsolutePath());

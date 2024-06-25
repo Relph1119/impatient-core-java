@@ -53,21 +53,21 @@ public class ComparatorDemo {
                 new Person("George", "Walker", "Bush"),
                 new Person("Barack", "Hussein", "Obama")
         };
-                
+
         Arrays.sort(people, Comparator.comparing(Person::getName));
         System.out.println(Arrays.toString(people));
-        
+
         Arrays.sort(people,
                 Comparator.comparing(Person::getLastName)
-                .thenComparing(Person::getFirstName));
+                        .thenComparing(Person::getFirstName));
         System.out.println(Arrays.toString(people));
-        
+
         Arrays.sort(people, Comparator.comparing(Person::getName,
                 (s, t) -> s.length() - t.length()));
-        
+
         Arrays.sort(people, Comparator.comparingInt(p -> p.getName().length()));
         System.out.println(Arrays.toString(people));
-        
+
         Arrays.sort(people, comparing(Person::getMiddleName,
                 nullsFirst(naturalOrder())));
         System.out.println(Arrays.toString(people));

@@ -15,7 +15,7 @@ public class DiscountedItem extends Item {
         var other = (DiscountedItem) otherObject;
         return discount == other.discount;
     }
-    
+
     public int hashCode() {
         return Objects.hash(super.hashCode(), discount);
     }

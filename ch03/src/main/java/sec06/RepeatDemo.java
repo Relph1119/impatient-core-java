@@ -16,13 +16,13 @@ public class RepeatDemo {
 
     public static void repeatMessage(String text, int count) {
         Runnable r = () -> {
-           for (int i = 0; i < count; i++) {
-              System.out.println(text);
-           }
+            for (int i = 0; i < count; i++) {
+                System.out.println(text);
+            }
         };
-        new Thread(r).start();                  
-     }
-    
+        new Thread(r).start();
+    }
+
     public static void main(String[] args) {
         repeat(10, () -> System.out.println("Hello, World!"));
         repeat(10, i -> System.out.println("Countdown: " + (9 - i)));

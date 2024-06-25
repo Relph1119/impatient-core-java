@@ -3,21 +3,21 @@ package sec04;
 import java.util.Date;
 
 record Point(double x, double y) {
+    // A static field and method (see Section 2.5)
+    public static Point ORIGIN = new Point();
+
     // A custom constructor
     public Point() {
         this(0, 0);
     }
 
+    public static double distance(Point p, Point q) {
+        return Math.hypot(p.x - q.x, p.y - q.y);
+    }
+
     // A method
     public double distanceFromOrigin() {
         return Math.hypot(x, y);
-    }
-
-    // A static field and method (see Section 2.5)
-    public static Point ORIGIN = new Point();
-
-    public static double distance(Point p, Point q) {
-        return Math.hypot(p.x - q.x, p.y - q.y);
     }
 }
 

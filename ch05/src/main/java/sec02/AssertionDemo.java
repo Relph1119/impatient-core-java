@@ -12,12 +12,12 @@ public class AssertionDemo {
         assert discriminant >= 0;
         assert a != 0 : "a == 0; not a quadradic equation";
         double discrRoot = Math.sqrt(discriminant);
-        return new double[] { 
+        return new double[]{
                 (-b - discrRoot) / (2 * a),
                 (-b + discrRoot) / (2 * a)
         };
     }
-    
+
     public static void main(String[] args) {
         try (var in = new Scanner(System.in)) {
             System.out.println("Enter a b c (e.g. 0 2 1)");

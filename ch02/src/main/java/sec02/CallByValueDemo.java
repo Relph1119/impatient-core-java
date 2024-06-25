@@ -3,9 +3,9 @@ package sec02;
 public class CallByValueDemo {
     public static void main(String[] args) {
         var boss = new EvilManager();
-        
+
         var fred = new Employee("Fred", 50000);
-        System.out.println("Salary before: " + fred.getSalary());            
+        System.out.println("Salary before: " + fred.getSalary());
         boss.giveRandomRaise(fred);
         System.out.println("Salary after: " + fred.getSalary());
 
@@ -13,9 +13,9 @@ public class CallByValueDemo {
         System.out.println("Sales before: " + sales);
         boss.increaseRandomly(sales);
         System.out.println("Sales after: " + sales);
-        
-        System.out.println("Employee before: " + fred.getName());            
+
+        System.out.println("Employee before: " + fred.getName());
         boss.replaceWithZombie(fred);
-        System.out.println("Employee after: " + fred.getName());            
+        System.out.println("Employee after: " + fred.getName());
     }
 }

@@ -10,7 +10,7 @@ public class ArrayReflection {
             newArray[i] = array[i];
         return newArray;
     }
-    
+
     public static Object goodCopyOf(Object array, int newLength) {
         Class<?> cl = array.getClass();
         if (!cl.isArray()) return null;
@@ -18,12 +18,12 @@ public class ArrayReflection {
         int length = Array.getLength(array);
         Object newArray = Array.newInstance(componentType, newLength);
         for (int i = 0; i < Math.min(length, newLength); i++)
-            Array.set(newArray, i, Array.get(array,  i));
+            Array.set(newArray, i, Array.get(array, i));
         return newArray;
     }
-    
+
     public static void main(String[] args) {
-        int[] primes = { 2, 3, 5, 7, 11 };
+        int[] primes = {2, 3, 5, 7, 11};
         primes = (int[]) goodCopyOf(primes, 10);
         System.out.println(Arrays.toString(primes));
     }

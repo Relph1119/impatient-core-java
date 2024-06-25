@@ -3,7 +3,7 @@ package sec02;
 public class Employee implements Person, Identified {
     private final String name;
     private double salary;
-        
+
     public Employee(String name, double salary) {
         this.name = name;
         this.salary = salary;
@@ -11,16 +11,18 @@ public class Employee implements Person, Identified {
 
     public void raiseSalary(double byPercent) {
         double raise = salary * byPercent / 100;
-        salary += raise;    
+        salary += raise;
     }
-    
+
     public String getName() {
         return name;
     }
-    
+
     public double getSalary() {
         return salary;
     }
 
-    public int getId() { return Identified.super.getId(); }
+    public int getId() {
+        return Identified.super.getId();
+    }
 }

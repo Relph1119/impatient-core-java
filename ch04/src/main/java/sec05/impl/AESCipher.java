@@ -1,15 +1,14 @@
 package sec05.impl;
 
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
+import sec05.Cipher;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
-
-import sec05.Cipher;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
 
 public class AESCipher implements Cipher {
     public byte[] encrypt(byte[] source, byte[] key) {
@@ -23,9 +22,9 @@ public class AESCipher implements Cipher {
             var ex2 = new RuntimeException();
             ex2.initCause(ex);
             throw ex2;
-        } 
+        }
     }
-    
+
     public byte[] decrypt(byte[] source, byte[] key) {
         SecretKey skey = new SecretKeySpec(key, "AES");
         javax.crypto.Cipher cipher;
@@ -37,9 +36,9 @@ public class AESCipher implements Cipher {
             var ex2 = new RuntimeException();
             ex2.initCause(ex);
             throw ex2;
-        } 
+        }
     }
-    
+
     @Override
     public int strength() {
         return 10;

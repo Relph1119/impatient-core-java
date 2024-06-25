@@ -4,12 +4,12 @@ public class ClassDemo {
     public static void main(String[] args) throws ReflectiveOperationException {
         Object obj = System.out;
         Class<?> cl = obj.getClass();
-        
+
         System.out.println("This object is an instance of " + cl.getName());
 
         String className = "java.util.Scanner";
         cl = Class.forName(className);
-            // An object describing the java.util.Scanner class
+        // An object describing the java.util.Scanner class
         cl = java.util.Scanner.class;
         System.out.println(cl.getName());
         Class<?> cl2 = String[].class; // Describes the array type String[]

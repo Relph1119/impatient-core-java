@@ -5,12 +5,12 @@ public class Employee {
     private final int id;
     private String name;
     private double salary;
-        
+
     public Employee() {
         lastId++;
         id = lastId;
     }
-    
+
     public Employee(String name, double salary) {
         this();
         this.name = name;
@@ -19,17 +19,17 @@ public class Employee {
 
     public void raiseSalary(double byPercent) {
         double raise = salary * byPercent / 100;
-        salary += raise;    
+        salary += raise;
     }
-    
+
     public String getName() {
         return name;
     }
-    
+
     public double getSalary() {
         return salary;
     }
-    
+
     public int getId() {
         return id;
     }

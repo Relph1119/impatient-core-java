@@ -12,7 +12,7 @@ public class IntSequenceDemo {
 
         digits = new DigitSequence(1729);
         avg = average(digits, 100);
-            // Will only look at the first four sequence values
+        // Will only look at the first four sequence values
         System.out.println("Average of the digits: " + avg);
     }
 

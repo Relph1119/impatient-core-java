@@ -7,8 +7,13 @@ public class AnonymousClassDemo {
 
     public static IntSequence randomInts(int low, int high) {
         return new IntSequence() {
-            public int next() { return low + generator.nextInt(high - low + 1); }
-            public boolean hasNext() { return true; }
+            public int next() {
+                return low + generator.nextInt(high - low + 1);
+            }
+
+            public boolean hasNext() {
+                return true;
+            }
         };
     }
 

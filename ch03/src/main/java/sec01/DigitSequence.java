@@ -16,7 +16,7 @@ public class DigitSequence implements IntSequence {
         number /= 10;
         return result;
     }
-    
+
     public int rest() {
         return number;
     }

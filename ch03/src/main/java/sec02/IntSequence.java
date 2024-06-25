@@ -1,7 +1,9 @@
 package sec02;
 
 public interface IntSequence {
-    default boolean hasNext() { return true; }
+    default boolean hasNext() {
+        return true;
+    }
 
     int next();
 }

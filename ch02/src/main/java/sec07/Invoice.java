@@ -3,20 +3,6 @@ package sec07;
 import java.util.ArrayList;
 
 public class Invoice {
-    private static class Item { // Item is nested inside Invoice
-        String description;
-        int quantity;
-        double unitPrice;
-
-        double price() {
-            return quantity * unitPrice;
-        }
-
-        public String toString() {
-            return quantity + " x " + description + " @ $" + unitPrice + " each";
-        }
-    }
-
     private final ArrayList<Item> items = new ArrayList<>();
 
     public void addItem(String description, int quantity, double unitPrice) {
@@ -34,5 +20,19 @@ public class Invoice {
             total += item.price();
         }
         System.out.println(total);
+    }
+
+    private static class Item { // Item is nested inside Invoice
+        String description;
+        int quantity;
+        double unitPrice;
+
+        double price() {
+            return quantity * unitPrice;
+        }
+
+        public String toString() {
+            return quantity + " x " + description + " @ $" + unitPrice + " each";
+        }
     }
 }

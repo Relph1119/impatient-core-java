@@ -40,7 +40,7 @@ public class ArrayUtil {
 
     private static <T> T[] repeat(int n, T obj, Class<T> cl) {
         @SuppressWarnings("uncheck") T[] result = (T[]) java.lang.reflect.Array.newInstance(cl, n);
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             result[i] = obj;
         }
         return result;

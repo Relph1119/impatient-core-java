@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Item {
     private final String description;
     private final double price;
-        
+
     public Item(String description, double price) {
         this.description = description;
         this.price = price;
@@ -21,9 +21,9 @@ public class Item {
         // Test whether the instance variables have identical values
         var other = (Item) otherObject;
         return Objects.equals(description, other.description)
-            && price == other.price;
+                && price == other.price;
     }
-    
+
     public int hashCode() {
         return Objects.hash(description, price);
     }

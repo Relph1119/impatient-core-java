@@ -3,7 +3,7 @@ package sec03;
 public class Employee {
     private final String name;
     private double salary;
-        
+
     public Employee(String name, double salary) {
         this.name = name;
         this.salary = salary;
@@ -11,22 +11,22 @@ public class Employee {
 
     public void raiseSalary(double byPercent) {
         double raise = salary * byPercent / 100;
-        salary += raise;    
+        salary += raise;
     }
-    
+
     public final String getName() {
         return name;
     }
-    
+
     public double getSalary() {
         return salary;
     }
-    
+
     public String toString() {
         return getClass().getName() + "[name=" + name
-            + ",salary=" + salary + "]";
+                + ",salary=" + salary + "]";
     }
-    
+
     public Employee clone() throws CloneNotSupportedException {
         return (Employee) super.clone();
     }

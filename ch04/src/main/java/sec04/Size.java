@@ -9,5 +9,7 @@ public enum Size {
         this.abbreviation = abbreviation;
     }
 
-    public String getAbbreviation() { return abbreviation; }
+    public String getAbbreviation() {
+        return abbreviation;
+    }
 }

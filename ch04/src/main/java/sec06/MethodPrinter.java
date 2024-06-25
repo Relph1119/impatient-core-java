@@ -12,12 +12,12 @@ public class MethodPrinter {
         String className = in.nextLine();
         Class<?> cl = Class.forName(className);
         while (cl != null) {
-            for (Method m : cl.getDeclaredMethods()) { 
+            for (Method m : cl.getDeclaredMethods()) {
                 System.out.println(
-                    Modifier.toString(m.getModifiers()) + " " +
-                    m.getReturnType().getCanonicalName() + " " +
-                    m.getName() +
-                    Arrays.toString(m.getParameters()));                    
+                        Modifier.toString(m.getModifiers()) + " " +
+                                m.getReturnType().getCanonicalName() + " " +
+                                m.getName() +
+                                Arrays.toString(m.getParameters()));
             }
             cl = cl.getSuperclass();
         }

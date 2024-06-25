@@ -14,17 +14,17 @@ public class ServiceLoaderDemo {
         String message = "Meet me at the toga party.";
         assert cipher != null;
         byte[] bytes = cipher.encrypt(message.getBytes(),
-                new byte[] { 3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 7, 9, 3 });
+                new byte[]{3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 7, 9, 3});
         var encrypted = new String(bytes, StandardCharsets.UTF_8);
         System.out.println(encrypted);
     }
-    
+
     public static Cipher getCipher(int minStrength) {
         for (Cipher cipher : cipherLoader) // Implicitly calls iterator
             if (cipher.strength() >= minStrength) return cipher;
         return null;
     }
-    
+
     public static Optional<Cipher> getCipher2(int minStrength) {
         return cipherLoader.stream().map(ServiceLoader.Provider::get).filter(c -> c.strength() >= minStrength).findFirst();
     }

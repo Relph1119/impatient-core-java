@@ -23,6 +23,14 @@
         <module>ch12</module>
         <module>ch13</module>
         <module>ch14</module>
+        <module>ch15.sec03</module>
+        <module>ch15.sec04</module>
+        <module>ch15.sec05</module>
+        <module>com.horstmann.greet</module>
+        <module>com.horstmann.greetsvc</module>
+        <module>ch15.sec06</module>
+        <module>ch15.sec08</module>
+        <module>ch15.sec13</module>
     </modules>
 
     <properties>
